@@ -11,3 +11,7 @@ multiples is 23. Find the sum of all the multiples of 3 or 5 below 1000.
 
 2520 is the smallest number that can be divided by each of the numbers from 1 to 10 without any remainder. 
 What is the smallest positive number that is evenly divisible by all of the numbers from 1 to 20?
+
+## 3.Palindrome checker
+[source from](https://khalilstemmler.com/articles/test-driven-development/introduction-to-tdd/#Requirements)
+A string is said to be a palindrome if it is the same if we start reading it from left to right or right to left.
