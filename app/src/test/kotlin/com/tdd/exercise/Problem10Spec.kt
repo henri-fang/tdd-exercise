@@ -20,4 +20,12 @@ class Problem10Spec : ShouldSpec({
     should("return 4 when taxi runs 5 km and wait 10 min") {
         Problem10.taxiFare(5, 10) shouldBe 6.5f
     }
+
+    should("return 6.4 when taxi runs 8 km and wait 0 min") {
+        Problem10.taxiFare(8, 0) shouldBe 6.4f
+    }
+
+    should("return 6.4 when taxi runs 8 km and wait 10 mins") {
+        Problem10.taxiFare(8, 10) shouldBe 8.9f
+    }
 })
