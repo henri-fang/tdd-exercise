@@ -9,4 +9,10 @@ class Problem9Spec : ShouldSpec({
         val password = "test-password"
         Problem9.login(username, password) shouldBe "success"
     }
+
+    should("return fail when username not exist") {
+        val userName = "non-exist-username"
+        val password = "test-password"
+        Problem9.login(userName, password) shouldBe "fail"
+    }
 })
