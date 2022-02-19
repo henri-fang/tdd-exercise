@@ -114,3 +114,33 @@ that minute.
 | 四个相同     | 四个相同数字的总和                     | 2，2，2，2，5 总和 8               |
 |              |                                        | 2，2，2，5，5 总和 0               |
 |              |                                        | 2，2，2，2，2 总额 8               |
+
+## 9. 登录验证
+
+As a registered user 
+I want to login 
+so that I can go shopping online
+
+### Tasking
+Given 用户名和密码正确, When 登录, Then 登录成功 <br>
+Given 用户不存在, When 登录, Then 登录失败 <br>
+Given 用户密码错误, When登录, Then 失败失败 <br>
+
+## 10. 出租车计费系统
+
+老板想要一个出租车计费系统，它的计算规则是这样的：
+
+1. 不超过8公里时每公里收费0.8元；
+2. 超过8公里则每公里加收50%长途费；
+3. 停车等待时每分钟加收0.25元；
+
+### Tasking 
+
+Given 乘客刚上车还没开车(0公里)，未发生等待，When 计费，Then 收费0元 <br>
+Given 乘客上车后还没开车，等待10分钟，When 计费，Then 收费2.5元 <br>
+Given 出租车恰好行驶了8公里，未发生等待，When 计费，Then 收费6.4元 <br>
+Given 出租车恰好行驶了8公里，等待10分钟，When 计费，Then 收费8.9元 <br>
+Given 出租车行驶了5公里(8公里以内)，未发生等待，When 计费，Then 收费4元 <br>
+Given 出租车行驶了5公里，等待10分钟，When 计费，Then 收费6.5元 <br>
+Given 出租车行驶了10公里(超过8公里)，未发生等待，When 计费，Then 收费12元 <br>
+Given 出租车行驶了10公里，等待10分钟，When 计费，Then 收费14.5元 <br>
