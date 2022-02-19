@@ -17,4 +17,11 @@ class Problem9Spec : ShouldSpec({
         val password = "test-password"
         Problem9(userStore).login(userName, password) shouldBe "fail"
     }
+
+    should("return fail when password is incorrect") {
+        val userName = "test-username"
+        val password = "incorrect-password"
+        Problem9(userStore).login(userName, password) shouldBe "fail"
+    }
+
 })
