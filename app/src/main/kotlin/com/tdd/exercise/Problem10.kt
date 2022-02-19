@@ -1,12 +1,16 @@
 package com.tdd.exercise
 
-object Problem10 {
+class Problem10 {
+
+    companion object {
+        const val waitingPrice = 0.25f
+        const val kilometerPrice = 0.8f
+        const val kilometerPriceLongJourney = 1.2f
+        const val longJourneyKilometers = 8
+    }
+
     fun taxiFare(mileage: Int, waitingTime: Int): Float {
-        val waitingPrice = 0.25f
-        val kilometerPrice = 0.8f
-        val kilometerPriceLongJourney = 1.2f
-        val waitingFee = waitingTime * waitingPrice
-        val mileageFee = if (mileage > 8) mileage * kilometerPriceLongJourney else mileage * kilometerPrice
-        return mileageFee + waitingFee
+        val mileagePrice = if (mileage > longJourneyKilometers) kilometerPriceLongJourney else kilometerPrice
+        return mileage * mileagePrice + waitingTime * waitingPrice
     }
 }
